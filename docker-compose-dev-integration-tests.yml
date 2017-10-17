@@ -1,0 +1,27 @@
+version: '3'
+services:
+  mocked_fixer_api:
+    build: ./mocked_fixer_api
+    ports:
+    - "8281:80"
+  rethink_db:
+    image: "rethinkdb:2.3.6"
+    ports:
+    - "8282:28015"
+    - "8283:8080"
+  fx_interval_api:
+    build: ./fx_interval_api
+    environment:
+    - TARGET=DEV
+    ports:
+    - "8284:80"
+    depends_on:
+    - mocked_fixer_api
+    - rethink_db
+  integration_tester:
+    build: ./integration_tester
+    command: [ "npm", "test" ]
+    depends_on:
+    - mocked_fixer_api
+    - rethink_db
+    - fx_interval_api

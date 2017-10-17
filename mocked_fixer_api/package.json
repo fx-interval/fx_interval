@@ -1,0 +1,17 @@
+{
+  "name": "mocked_fixer_api",
+  "version": "1.0.0",
+  "description": "Mocked fixer api for integration tests.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anders Granlund",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "moment": "^2.19.1"
+  }
+}

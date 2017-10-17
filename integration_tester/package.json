@@ -1,0 +1,17 @@
+{
+  "name": "integration_tester",
+  "version": "1.0.0",
+  "description": "Runs the integration tests.",
+  "scripts": {
+    "test": "mocha 'src/test/**/*.js'"
+  },
+  "author": "Anders Granlund",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5",
+    "rethinkdb": "^2.3.3"
+  }
+}

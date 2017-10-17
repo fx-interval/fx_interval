@@ -1,0 +1,16 @@
+version: '3'
+services:
+  rethink_db:
+    image: "rethinkdb:2.3.6"
+    ports:
+    - "8181:28015"
+    - "8182:8080"
+  fx_interval_api:
+    build: ./fx_interval_api
+    environment:
+    - TARGET=DEV
+    command: [ "bash", "-c", "node src/scripts/createRethinkDbSchema.js && npm test" ]
+    ports:
+    - "8183:80"
+    depends_on:
+    - rethink_db

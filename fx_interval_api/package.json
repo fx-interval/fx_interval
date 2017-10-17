@@ -1,0 +1,27 @@
+{
+  "name": "fx_interval_api",
+  "version": "1.0.0",
+  "description": "JSON REST API for getting historical foreign exchange rates in a given time interval.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "mocha 'src/test/**/*.js'"
+  },
+  "keywords": [
+    "FX"
+  ],
+  "author": "Anders Granlund",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "express": "^4.16.2",
+    "mocha": "^4.0.1",
+    "moment": "^2.19.1",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5",
+    "rethinkdb": "^2.3.3",
+    "sinon": "^4.0.1",
+    "twix": "^1.2.1"
+  },
+  "devDependencies": {}
+}

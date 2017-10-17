@@ -1,0 +1,21 @@
+{
+    "app": {
+        "host": "0.0.0.0",
+        "port": 80
+    },
+    "FixerFxRateSource": {
+        "rateLimitRetries": {
+            "maxNumAttempts": 3,
+            "initialTimeUntilNextAttempt": 1000
+        }
+    },
+    "fixerApi": {
+        "baseUrl": "http://mocked_fixer_api:80"
+    },
+    "rethinkDb": {
+        "host": "rethink_db",
+        "port": 28015,
+        "db": "fxRateCache",
+        "createSchema": true
+    }
+}

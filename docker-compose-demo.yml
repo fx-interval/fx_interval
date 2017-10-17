@@ -1,0 +1,15 @@
+version: '3'
+services:
+  rethink_db:
+    image: "rethinkdb:2.3.6"
+    ports:
+    - "8381:28015"
+    - "8382:8080"
+  fx_interval_api:
+    build: ./fx_interval_api
+    environment:
+    - TARGET=DEMO
+    ports:
+    - "8383:80"
+    depends_on:
+    - rethink_db

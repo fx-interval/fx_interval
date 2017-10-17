@@ -1,0 +1,13 @@
+{
+    "fxIntervalApi": {
+        "baseUrl": "http://fx_interval_api:80"
+    },
+    "mockedFixerApi": {
+        "baseUrl": "http://mocked_fixer_api:80"
+    },
+    "rethinkDb": {
+        "host": "rethink_db",
+        "port": 28015,
+        "db": "fxRateCache"
+    }
+}
